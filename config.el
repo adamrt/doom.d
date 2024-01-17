@@ -82,4 +82,8 @@
   (setq epg-gpg-program "gpg2")
   (setq epg-pinentry-mode 'loopback)
   :init
+  ;; This shell command allows the agent to start and GPG_TTY to be set in this process.
+  ;; Without this we don't pick up the environment since this isn't started with zshrc,
+  ;; unless started from the command line.
+  (shell-command "gpg-connect-agent /bye")
   (pinentry-start))

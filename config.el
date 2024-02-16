@@ -75,7 +75,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+(after! projectile
+  (setq projectile-switch-project-action 'projectile-vc))
 
+(after! magit
+  (setq magit-save-repository-buffers t))
 
 (use-package! pinentry
   :config

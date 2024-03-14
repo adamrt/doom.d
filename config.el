@@ -100,3 +100,10 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
+(setq mac-command-modifier      'meta
+      ns-command-modifier       'meta
+      mac-option-modifier       'super
+      ns-option-modifier        'super
+      mac-right-option-modifier 'none
+      ns-right-option-modifier  'none)

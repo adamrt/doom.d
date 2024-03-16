@@ -8,6 +8,8 @@
 (setq user-full-name "Adam Patterson"
       user-mail-address "adam@adamrt.com")
 
+;; Maximize the window on startup
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use

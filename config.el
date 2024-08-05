@@ -109,3 +109,13 @@
       ns-option-modifier        'super
       mac-right-option-modifier 'none
       ns-right-option-modifier  'none)
+
+;; (add-hook 'go-mode-hook #'lsp-deferred)
+;; ;; Make sure you don't have other goimports hooks enabled.
+;; (defun lsp-go-install-save-hooks ()
+;;   (add-hook 'before-save-hook #'lsp-organize-imports t t))
+;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+;; global beacon minor-mode
+(use-package! beacon)
+(after! beacon (beacon-mode 1))

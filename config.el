@@ -5,6 +5,10 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
+(setq gc-cons-threshold 100000000) ;; 100mb
+(setq read-process-output-max (* 1024 1024 3)) ;; 3mb
+
+
 (setq user-full-name "Adam Patterson"
       user-mail-address "adam@adamrt.com")
 
@@ -110,23 +114,22 @@
       mac-right-option-modifier 'none
       ns-right-option-modifier  'none)
 
-;; (add-hook 'go-mode-hook #'lsp-deferred)
-;; ;; Make sure you don't have other goimports hooks enabled.
-;; (defun lsp-go-install-save-hooks ()
-;;   (add-hook 'before-save-hook #'lsp-organize-imports t t))
-;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
-
 ;; global beacon minor-mode
 (use-package! beacon)
 (after! beacon (beacon-mode 1))
 
 (after! lsp-mode
-  (setq  lsp-go-use-gofumpt t)
-  (setq  lsp-go-analyses '((nilness . t)
-                           (unusedparams . t)
-                           (unusedwrite . t)
-                           (useany . t)
-                           (unusedvariable . t))))
+  (setq lsp-headerline-breadcrumb-enable t
+        lsp-lens-enable t
+        lsp-ui-sideline-enable t
+        lsp-ui-sideline-show-hover t)
+
+  (setq lsp-go-use-gofumpt t
+        lsp-go-analyses '((nilness . t)
+                          (unusedparams . t)
+                          (unusedwrite . t)
+                          (useany . t)
+                          (unusedvariable . t))))
 
 (add-hook 'go-mode-hook #'lsp-deferred)
 ;; Make sure you don't have other goimports hooks enabled.
@@ -144,7 +147,6 @@
   (require 'dap-cpptools))
 
 (require 'dap-lldb)
-
 (setq lsp-clangd-binary-path "/opt/homebrew/opt/llvm/bin/clangd")
 (setq package-selected-packages '(realgud-lldb realgud))
 

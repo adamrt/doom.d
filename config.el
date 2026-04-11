@@ -17,6 +17,7 @@
       ns-right-option-modifier  'none)
 (setq display-line-numbers-type nil
       org-directory "~/org/")
+(setq eglot-ignored-server-capabilities '(:inlayHintProvider))
 
 (after! projectile
   (setq projectile-switch-project-action 'projectile-vc))

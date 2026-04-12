@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: license
+# key: isc
+# --
+// Copyright (c) `(format-time-string "%Y")` Adam Patterson
+// SPDX-License-Identifier: ISC
+
+$0

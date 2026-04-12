@@ -58,11 +58,9 @@
 
        :emacs
        dired             ; making dired pretty [functional]
-       ;; @adamrt temporarily disable
        electric          ; smarter, keyword-based electric-indent
        ;;ibuffer         ; interactive buffer management
        undo              ; persistent, smarter undo for your inevitable mistakes
-       ;; @adamrt temporarily disable
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -81,8 +79,7 @@
        ;;biblio            ; Writes a PhD for you (citation needed)
        ;;collab            ; buffers with friends
 
-       ;; @adamrt temporarily disable
-       ;; (debugger +lsp)         ; FIXME stepping through code, to help you add bugs
+       ;;(debugger +lsp)         ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces

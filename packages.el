@@ -2,3 +2,5 @@
 ;;; $DOOMDIR/packages.el
 
 ;; Run doom/sync and restart emacs after modifying this file.
+
+(package! pinentry)

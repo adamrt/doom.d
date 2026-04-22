@@ -7,7 +7,7 @@
 
 (setq user-full-name "Adam Patterson"
       user-mail-address "adam@adamrt.com")
-(setq doom-font (font-spec :family "Berkeley Mono" :size 20)
+(setq doom-font (font-spec :family "Berkeley Mono" :size 24)
       doom-theme 'doom-one)
 (setq mac-command-modifier      'meta
       ns-command-modifier       'meta
@@ -27,6 +27,12 @@
 
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (setq web-mode-engines-alist '(("django" . "templates/.*\\.html\\'")))
+
+;; This uses loopback and removes the need for GPG_TTY=$(tty).
+(use-package! pinentry
+  :init
+  (setq epg-pinentry-mode 'loopback)
+  (pinentry-start))
 
 (after! apheleia
   ;; Djlint for Django templates

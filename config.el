@@ -34,6 +34,9 @@
   (setq epg-pinentry-mode 'loopback)
   (pinentry-start))
 
+;; Increase color variation
+(setq treesit-font-lock-level 4)
+
 (after! apheleia
   ;; Djlint for Django templates
   (setf (alist-get 'djlint apheleia-formatters) '("djlint" "--reformat" "--profile=django" "-"))

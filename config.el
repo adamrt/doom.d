@@ -8,7 +8,7 @@
 (setq user-full-name "Adam Patterson"
       user-mail-address "adam@adamrt.com")
 (setq doom-font (font-spec :family "Berkeley Mono" :size 24)
-      doom-theme 'doom-one)
+      doom-theme 'adamrt)
 (setq mac-command-modifier      'meta
       ns-command-modifier       'meta
       mac-option-modifier       'super
